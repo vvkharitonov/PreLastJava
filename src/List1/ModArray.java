@@ -1,5 +1,6 @@
 package List1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,6 +9,10 @@ import java.util.List;
 public class ModArray {
 
     private List<String> list;
+
+    public ModArray() {
+        this.list=new ArrayList<String>();
+    }
 
     public int includes(String testString)
     {
@@ -24,6 +29,22 @@ public class ModArray {
 
         
     }
+
+
+    public String FirstOrZero() {
+        if (list.isEmpty()) {
+            return ("0");
+        } else return (list.get(0));
+    }
+
+
+    public String LastOrEmpty() {
+        if (list.isEmpty()) {
+            return ("empty");
+        } else return (list.get(list.size()-1));
+    }
+
+
 
     public void setList(List<String> list) {
         this.list = list;

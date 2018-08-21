@@ -12,6 +12,8 @@ import static org.junit.Assert.*;
  * Created by dsk21 on 8/21/2018.
  */
 public class ModArrayTest {
+
+
     ModArray testArray;
 
 @Before
@@ -20,6 +22,31 @@ public class ModArrayTest {
         testArray = new ModArray();
         testArray.setList(Arrays.asList("a1", "a2", "a3", "a1"));
     }
+
+
+    @Test
+    public void firstOrZeroFirst() throws Exception {
+    Assert.assertEquals("a1",testArray.FirstOrZero());
+    }
+
+    @Test
+    public void firstOrZeroZero() throws Exception {
+        ModArray testZeroArray = new ModArray();
+        Assert.assertEquals("0",testZeroArray.FirstOrZero());
+    }
+
+
+    @Test
+    public void lastOrEmptyLast() throws Exception {
+        Assert.assertEquals("a1",testArray.LastOrEmpty());
+    }
+
+    @Test
+    public void lastOrEmptyEmpty() throws Exception {
+        ModArray testZeroArray = new ModArray();
+        Assert.assertEquals("empty",testZeroArray.LastOrEmpty());
+    }
+
 
 
 
