@@ -12,9 +12,18 @@ import static org.junit.Assert.*;
  * Created by dsk21 on 8/21/2018.
  */
 public class ModArrayTest {
-
-
     ModArray testArray;
+
+    @Test
+    public void findElementTrue() throws Exception {
+        Assert.assertEquals("a3",testArray.findElement("a3"));
+    }
+
+
+    @Test
+    public void findElementFalse() throws Exception {
+        Assert.assertEquals("Error",testArray.findElement("a32"));
+    }
 
 @Before
     public void Preset()
@@ -38,13 +47,13 @@ public class ModArrayTest {
 
     @Test
     public void lastOrEmptyLast() throws Exception {
-        Assert.assertEquals("a1",testArray.LastOrEmpty());
+        Assert.assertEquals("a1",testArray.lastOrEmpty());
     }
 
     @Test
     public void lastOrEmptyEmpty() throws Exception {
         ModArray testZeroArray = new ModArray();
-        Assert.assertEquals("empty",testZeroArray.LastOrEmpty());
+        Assert.assertEquals("empty",testZeroArray.lastOrEmpty());
     }
 
 

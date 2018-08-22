@@ -14,8 +14,6 @@ public class Task1 {
 
         testArray.includes("a1");
 
-
-
     }
 
 }
